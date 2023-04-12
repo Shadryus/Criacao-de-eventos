@@ -5,7 +5,7 @@
 }
 
 /* os itens de formulário precisam ter a fonte definida individualmente*/
-body, input, button, select, textarea{
+body, input, select, textarea{
   font-family: 'Poppins', sans-serif;
 }
 
@@ -60,7 +60,7 @@ form{
   margin-top: 38px;
   background: #FAFAFC;
   min-height: 300px;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   padding: 64px;
 
   display: flex;
@@ -78,8 +78,8 @@ fieldset{
   gap: 24px;
 }
 
-fieldset legend{
-  font-family: 'Archivo' sans-serif;
+fieldset legend {
+  font-family: 'Archivo', sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 34px;
@@ -198,4 +198,41 @@ fieldset legend{
 /* quando focado na checkbox deixa uma borda preta na checkbox customizada*/
 .checkbox-wrapper input:focus + label::before{
   outline: 2px solid black;
+}
+
+footer{
+  background: #F0F0F4;
+
+  height: 136px;
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px 64px;
+
+  margin-bottom: 100px;
+  border-top: 1px solid #D6D6D6;
+  border-radius: 0 0 8px 8px;
+}
+
+/* formatação do botão */
+footer .button{
+  height: 56px;
+  background: #04D361;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  font-family: 'Archivo', sans-serif;
+  border: none;
+}
+
+/* troca a cor do botão quando passa o mouse por cima */
+footer .button:hover{
+  background-color: #059c49;
+}
+
+/* troca a cor da borda do inputs com required quando atende as condições  */
+input:invalid{
+  border: 1px solid #FF1010;
 }
